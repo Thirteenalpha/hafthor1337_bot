@@ -40,12 +40,14 @@ def check_author(author):
 
 
 i = 50
+print("Initiating bot")
+time.sleep(60)
 while (i>0):
         message_list = open("Message_list.txt",'a+')
         for topic in subreddits:
                 
                 subreddit = reddit.subreddit(topic)
-                for submission in subreddit.new(limit = 20):
+                for submission in subreddit.new(limit = 5):
                         
                         author = str(submission.author)
                         
@@ -65,4 +67,4 @@ while (i>0):
                         print(author)
         message_list.close()
         print("Online")
-        time.sleep(5)       
+        time.sleep(540)       
