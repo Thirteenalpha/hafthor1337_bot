@@ -11,7 +11,7 @@ user_agent = 'console: message_bot 1.0',
 username = 'ConcentrateOk3302',
 password = '7371+10270')
 
-subreddits = ['tes_ting']
+subreddits = ['CheckthisVin','carfax','whatcarshouldIbuy']
 
 
 
@@ -59,7 +59,7 @@ while (i>0):
                                 continue
                         reddit.redditor(author).message('Cheap Carfax','Get your $5 carfax here: https://carsimulcast.com/')
                         message_list.write('\n'+ author)
-                        print("here")
+                        print("Message sent.")
         message_list.close()
-        print("hello")
+        print("Online")
         time.sleep(5)       
