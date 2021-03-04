@@ -1,3 +1,2 @@
-Python3
 Praw
 Schedule
