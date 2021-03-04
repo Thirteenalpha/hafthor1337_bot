@@ -11,7 +11,7 @@ user_agent = 'console: message_bot 1.0',
 username = 'ConcentrateOk3302',
 password = '7371+10270')
 
-subreddits = ['tes_ting']
+subreddits = ['CheckthisVin','carfax','whatcarshouldIbuy']
 
 
 
