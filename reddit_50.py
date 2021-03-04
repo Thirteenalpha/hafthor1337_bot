@@ -7,7 +7,7 @@ import schedule
 
 reddit = praw.Reddit(client_id = 'iYrHnMb2wlcLmg',
 client_secret = 'K3ZsTAIUAfDZN6ceeO0GL9KPrGVT2Q',
-user_agent = 'console: message_bot 1.0',
+user_agent = 'console: message_bot 1.1',
 username = 'ConcentrateOk3302',
 password = '7371+10270')
 
