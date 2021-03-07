@@ -56,7 +56,7 @@ while (i>0):
                                 continue
                         if (topic == 'whatcarshouldIbuy') and (whatcarshouldIbuy_count < 5):
                                 try :
-                                        reddit.redditor(author).message('Cheap Carfax', "Hello, how's it going. I saw your submission on whatcarshouldibuy. if you are interested, you could check out cheap carafes here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
+                                        reddit.redditor(author).message('Cheap Carfax', "Hello, how's it going. I saw your submission on whatcarshouldibuy. if you are interested, you could check out cheap carfax here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
                                         whatcarshouldIbuy_count += 1
                                         message_list.write('\n' + author)
                                         message_list.write('\n' + author)
@@ -69,7 +69,7 @@ while (i>0):
                         elif (topic == 'carfax'):
 
                                 try :       
-                                        reddit.redditor(author).message('Cheap Carfax',"Hello, how's it going. I saw your submission on carfax. if you are interested, you could check out cheap carafes here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
+                                        reddit.redditor(author).message('Cheap Carfax',"Hello, how's it going. I saw your submission on carfax. if you are interested, you could check out cheap carfax here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
                                         message_list.write('\n'+ author)
                                         message_list.write('\n' + author)
                                         print("Message sent.")
@@ -81,7 +81,7 @@ while (i>0):
                                                 message_list.close()
                         elif (topic == 'CheckthisVin'):
                                 try :       
-                                        reddit.redditor(author).message('Cheap Carfax',"Hello, how's it going. I saw your submission on CheckthisVin. if you are interested, you could check out cheap carafes here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
+                                        reddit.redditor(author).message('Cheap Carfax',"Hello, how's it going. I saw your submission on CheckthisVin. if you are interested, you could check out cheap carfax here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
                                         message_list.write('\n'+ author)
                                         message_list.write('\n' + author)
                                         print("Message sent.")
