@@ -5,13 +5,13 @@ import schedule
 
 
 
-reddit = praw.Reddit(client_id = 'ka8DlGn756NaTA',
-client_secret = 'vASC5cmoEaqg1Kl2-e9R7yeUZoMCEg',
-user_agent = 'console: message_bot 1.2',
-username = '13alpha36',
+reddit = praw.Reddit(client_id = 'pJ8rbRTJAwVrog',
+client_secret = 'UYGBff9tCdtuWCljjHswRI-_e-Vk6w',
+user_agent = 'console: message_bot 1.3',
+username = 'Dopedude4712',
 password = '7371+10270')
 
-subreddits = ['CheckthisVin','carfax','whatcarshouldIbuy']
+subreddits = ['carfax','CheckthisVIn','whatcarshouldIbuy']
 
 
 
@@ -43,12 +43,12 @@ i = 50
 print("Initiating bot")
 time.sleep(60)
 while (i>0):
-        message_list = open("Message_list.txt",'a+')
+        
         for topic in subreddits:
                 
                 subreddit = reddit.subreddit(topic)
-                for submission in subreddit.new(limit = 5):
-                        
+                for submission in subreddit.new(limit = 3):
+                        message_list = open("Message_list.txt",'a+')
                         author = str(submission.author)
                         
                         if check_author(author) == 1 :
@@ -56,24 +56,41 @@ while (i>0):
                                 continue
                         if (topic == 'whatcarshouldIbuy') and (whatcarshouldIbuy_count < 5):
                                 try :
-                                        reddit.redditor(author).message('Cheap Carfax','Get your $5 carfax here: https://carsimulcast.com/')
+                                        reddit.redditor(author).message('Cheap Carfax', "Hello, how's it going. I saw your submission on whatcarshouldibuy. if you are interested, you could check out cheap carafes here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
                                         whatcarshouldIbuy_count += 1
                                         message_list.write('\n' + author)
                                         message_list.write('\n' + author)
+                                        message_list.close()
                                         continue
                                 except praw.exceptions.APIException as e:
                                         if e.error_type == "NOT_WHITELISTED_BY_USER_MESSAGE":
                                                 print("Lol this user has a whitelist, there is no way to message them, giving up")
+                                                message_list.close()
+                        elif (topic == 'carfax'):
 
-                        try :       
-                                reddit.redditor(author).message('Cheap Carfax','Get your $5 carfax here: https://carsimulcast.com/')
-                                message_list.write('\n'+ author)
-                                message_list.write('\n' + author)
-                                print("Message sent.")
-                                print(author)
-                        except praw.exceptions.APIException as e:
-                                if e.error_type == 'NOT_WHITELISTED_BY_USER_MESSAGE':
-                                        print("Lol this user has a whitelist, ther is no way to message them, giving up")
-        message_list.close()
+                                try :       
+                                        reddit.redditor(author).message('Cheap Carfax',"Hello, how's it going. I saw your submission on carfax. if you are interested, you could check out cheap carafes here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
+                                        message_list.write('\n'+ author)
+                                        message_list.write('\n' + author)
+                                        print("Message sent.")
+                                        message_list.close()
+                                        print(author)
+                                except praw.exceptions.APIException as e:
+                                        if e.error_type == 'NOT_WHITELISTED_BY_USER_MESSAGE':
+                                                print("Lol this user has a whitelist, ther is no way to message them, giving up")
+                                                message_list.close()
+                        elif (topic == 'CheckthisVin'):
+                                try :       
+                                        reddit.redditor(author).message('Cheap Carfax',"Hello, how's it going. I saw your submission on CheckthisVin. if you are interested, you could check out cheap carafes here : carsimulcast . com . This helped me, so I thought to help you. Cheers and have a nice day")
+                                        message_list.write('\n'+ author)
+                                        message_list.write('\n' + author)
+                                        print("Message sent.")
+                                        message_list.close()
+                                        print(author)
+                                except praw.exceptions.APIException as e:
+                                        if e.error_type == 'NOT_WHITELISTED_BY_USER_MESSAGE':
+                                                print("Lol this user has a whitelist, ther is no way to message them, giving up")
+                                                message_list.close()
+        
         print("Online")
         time.sleep(540)       
